@@ -1,0 +1,218 @@
+html{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+section.top{
+    background: #CCE2F8;
+}
+
+section.middle{
+    background: white;
+}
+
+section.bottom {
+    background: #A2B6DE;
+}
+
+.main{
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20%;
+}
+
+.contact{
+    flex-grow: 1;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.info{
+    margin-top: 80px;
+}
+
+.inner-info{
+    background: #A2B6DE;
+    padding:  40px 50px;
+    color: white;
+    text-align: center;
+}
+
+.inner-info h1{
+    font-size: 22px;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.topbar{
+    background: #A2B6DE;
+    padding: 20px 5%;
+}
+
+.topbar h1{
+    font-size: 22px;
+    color: white;
+    margin: 0;
+}
+
+.contact-form{
+    background: #F2F3F4;
+    padding: 40px 0 60px 5%;
+}
+
+.input-area{
+    margin: 8px 0;
+    padding: 12px 18px;
+}
+
+.form-control{
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.form-control:hover{
+    border-bottom: 1px solid black;
+}
+
+label{
+    width: 80px;
+    margin-right: 25px;
+    display: inline-block;
+    transition: 0.5s;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    min-height: 50px;
+    max-height: 130px;
+    resize: vertical;
+}
+
+.input-area input, .input-area textarea{
+     width: 90%;
+ }
+
+.input-message *{
+    vertical-align: top;
+}
+
+.submit{
+    cursor: pointer;
+    background: #A2B6DE;
+    border-color: transparent;
+    color: white;
+    font-size: 14px;
+    padding: 3px 25px;
+    margin-top: 15px;
+    margin-left: 125px;
+    transition: 0.5s;
+}
+
+.submit:hover{
+    background: #025DA5;
+}
+
+
+@media only screen and (min-width: 650px){
+    .input-area input, .input-area textarea{
+        width: 64%;
+    }
+    label{
+        margin-right: 60px;
+        font-size: 16px;
+    }
+    .form-control{
+        font-size: 12px;
+    }
+    .submit{
+        margin-left: 162px;
+    }
+    .input-area input, .input-area textarea{
+        width: 55%;
+    }
+
+}
+
+@media only screen and (min-width: 600px){
+    .info{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+
+    .container{
+        grid-template-rows: 25% 60% 15%;
+        grid-template-areas:
+                "top"
+                "middle"
+                "bottom";
+        height: 100vh;
+    }
+    section.top{
+        display: block;
+        grid-area: top;
+    }
+
+    section.middle{
+        display: block;
+        grid-area: middle;
+    }
+
+    .main{
+        position: absolute;
+        display: flex;
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 20%;
+    }
+
+    .info{
+        margin-top: 0;
+        margin-right: 40px;
+    }
+
+    .inner-info{
+        text-align: left;
+    }
+
+    .contact{
+        margin-left: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .form-control{
+        font-size: 12px;
+    }
+
+    label{
+        font-size: 16px;
+    }
+    .input-area input, .input-area textarea{
+        width: 55%;
+    }
+
+}

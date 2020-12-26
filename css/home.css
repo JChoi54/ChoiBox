@@ -1,0 +1,185 @@
+html{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+section{
+    padding: 50px;
+}
+
+h1, h2, .read-more{
+    margin: 0;
+    z-index: 5;
+}
+
+
+.read-more{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background: url('../images/arrow.svg') no-repeat;
+    background-size: 7px;
+    background-position: 0 3px;
+    padding-left: 16px;
+    transition: 0.5s;
+}
+
+.read-more:hover{
+    padding-left: 30px;
+    transition: 0.5s;
+}
+
+.clipper{
+    overflow: hidden;
+}
+
+section.main{
+    padding: 130px 0 20px 0;
+    background: #F4F1F2;
+    /*
+    background: url('../images/choiboxhome.jpg');
+    background-size: cover;
+    */
+}
+
+h2 {
+    font-size: 20px;
+}
+
+section.main h1{
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 80px;
+    transition: 0.5s;
+ }
+
+section.main p{
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+section.main img{
+     width: 100%;
+     margin: 0;
+ }
+
+section.about, section.products{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+section.about{
+    background: white;
+    padding-bottom: 70px;
+}
+
+section.products{
+    background: #A2B6DE;
+}
+
+section.products a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+section.products a:hover{
+    border-left: 2px solid black;
+    padding-left: 20px;
+    transition: 0.5s;
+}
+
+section.products .rectangle{
+    display: none;
+    position: absolute;
+    top: 21%;
+    left: 16%;
+    width: 90px;
+    height: 40px;
+    background: #025DA5;
+}
+
+@media only screen and (min-width: 600px){
+    section.main h1{
+        margin-top: 0;
+        font-size: 28px;
+    }
+    section.main p{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    .container{
+        grid-template-columns: 75% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas:
+            "main about"
+            "main products";
+        height: 100vh;
+    }
+    section.main{
+        grid-area: main;
+        background: #CCE2F8;
+    }
+    section.main .inner{
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        z-index: 10;
+    }
+    section.main h1{
+        font-size: 34px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    section.main p{
+        font-size: 16px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    section.main img{
+        display: block;
+        position: absolute;
+        right: 9%;
+        top: 25%;
+        height: auto;
+        width:75%;
+    }
+    section.products{
+        display: flex;
+        justify-content: center;
+    }
+    section.products .rectangle{
+        display: block;
+    }
+    section.products h2{
+        color: white;
+    }
+    section{
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+    section.products a:hover{
+        border-left: none;
+        padding-left: 0;
+        color: #585858;;
+        transition: 0.5s;
+    }
+
+}
+
+

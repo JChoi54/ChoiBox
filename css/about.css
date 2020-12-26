@@ -1,0 +1,153 @@
+html{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+section{
+    padding: 50px;
+}
+
+section.top {
+    background: #A2B6DE;
+    z-index: -3;
+    padding-top: 220px;
+    font-size: 14px;
+    transition: 0.5s;
+
+}
+
+section.top h1{
+    text-align: center;
+}
+
+section.bottom{
+    background: #CCE2F8;
+    z-index: -3;
+}
+
+section.bottom p{
+     line-height: 200%;
+     padding-top: 40px;
+     font-size: 14px;
+ }
+
+section.bottom .inner{
+    background: #CCE2F8;
+}
+
+
+.bottom img{
+   width: 100%;
+}
+
+@media only screen and (min-width: 600px){
+    section.top {
+        padding-top: 120px;
+        font-size: 16px;
+    }
+    section.bottom{
+        padding: 100px;
+    }
+    section.bottom p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+
+    .container{
+        grid-template-rows: 35% auto;
+        grid-template-areas:
+                "top"
+                "bottom";
+        height: 100vh;
+    }
+    section.top{
+        display: block;
+        grid-area: top;
+        padding-top: 0;
+    }
+
+    section.top .title{
+        position: absolute;
+        left: 52%;
+        top: 20%;
+    }
+
+    section.top h1{
+        font-size: 26px;
+    }
+
+    section.bottom{
+        display: block;
+        grid-area: bottom;
+        padding: 50px;
+    }
+
+    section.bottom p{
+        font-size: 16px;
+    }
+
+    section.bottom .inner{
+        margin-left: 41%;
+        position: static;
+        z-index: 5;
+    }
+
+    section.bottom .about{
+        padding: 15px 30px 15px 40px;
+    }
+
+    section.bottom p{
+        line-height: 175%;
+        padding-top: 0;
+    }
+
+    .bottom img{
+        display: block;
+        position: absolute;
+        width: 40%;
+        height: auto;
+        left: 8%;
+        top: 20%;
+        z-index: -1;
+
+    }
+
+    .border{
+        position: absolute;
+        width: 35%;
+        height: 40%;
+        top: 14%;
+        left: 4%;
+        border: solid 2px white;
+        z-index: -2;
+    }
+
+    .rectangle{
+        position: absolute;
+        width: 18%;
+        height: 15%;
+        top: 25%;
+        right: 0;
+        background: white;
+        z-index: 1;
+    }
+
+}
+
+@media only screen and (min-width: 1600px){
+    section.bottom .about{
+        padding: 15px 30px 40px 40px;
+    }
+}

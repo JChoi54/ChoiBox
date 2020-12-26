@@ -1,0 +1,238 @@
+*, ::after, ::before {
+    box-sizing: initial;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: none;
+    line-height: 1;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.title{
+    transition: 1s;
+    font-size: 14px;
+    text-align: center;
+}
+.title h1{
+    font-size: 1.5rem;
+}
+
+section{
+    padding: 50px;
+}
+
+h1, h2{
+    margin: 0;
+    z-index: 5;
+}
+
+section.left{
+    padding-top: 130px;
+    padding-bottom: 300px;
+    background: #CCE2F8;
+    display: none;
+}
+
+section.right{
+    background: #A2B6DE;
+    padding-top: 200px;
+}
+
+section.right .inner{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+section.right .animate p,
+section.right .animate h2{
+    line-height: 250%;
+    margin-bottom: -15px;
+}
+
+section.right .boot.animate h2{
+    font-weight: bold;
+    margin-bottom: -0.5px!important;
+}
+
+section.right .boot.animate p{
+    margin-bottom: -0.5px!important;
+}
+
+section.right .animate p{
+    font-size: 14px;
+}
+
+section.right .animate h2{
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.mutebox-carousel{
+    display: none;
+}
+
+.image{
+    display: none;
+}
+
+.responsive_img img{
+    width: 100%;
+    margin: 70px 0 40px 0;
+}
+
+
+.manual1{
+    padding-top: 60px;
+}
+
+.manual1 a,
+.manual2 a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    pointer-events: all;
+}
+
+.manual1 a:hover{
+    color: #585858;
+    transition: 0.2s;
+}
+
+.manual2 a:hover{
+    color: #585858;
+    transition: 0.2s;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
+}
+
+@media only screen and (min-width: 600px){
+    section.right{
+        padding: 100px;
+    }
+    .title{
+        transition: 0.7s;
+        font-size: 16px;
+        text-align: center;
+    }
+    .title h1{
+        font-size: 1.5rem;
+    }
+    .responsive_img img{
+        width: 100%;
+        margin: 80px 0 50px 0;
+    }
+    section.right .animate p{
+        font-size: 16px;
+    }
+    section.right .animate h2{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1020px){
+
+    .product-container{
+        margin: 0;
+        grid-template-columns: 30% auto;
+        grid-template-areas:
+                "left right";
+    }
+    section.left{
+        display: block;
+        grid-area: left;
+    }
+
+    section.right{
+        padding: 50px;
+    }
+
+    section.right .inner{
+        position: relative;
+        z-index: 5;
+        padding: 0 10px 100px 80px;
+        margin-top: 160px;
+        pointer-events: none
+    }
+
+    section.right .animate{
+        padding-top: 30px;
+        padding-left: 30%;
+    }
+
+    section.right .animate p{
+        font-size: 16px;
+    }
+
+    section.right .animate h2{
+        font-size: 22px;
+    }
+
+    .mutebox-carousel,
+    .image{
+        display: block;
+        position: absolute;
+        left: 7%;
+        top: 18%;
+        z-index: 3;
+    }
+
+    .mutebox-carousel .carousel{
+        position: fixed;
+        width:43%;
+        height: auto;
+    }
+
+    .mutebox-carousel img{
+        width:100%;
+        height: auto;
+    }
+
+    .image img{
+        position: fixed;
+        width:43%;
+        height: auto;
+    }
+
+    .rectangle{
+        display: block;
+        position: absolute;
+        width: 17%;
+        height: 35%;
+        top: 0;
+        right: 7%;
+        background: white;
+        z-index: 1;
+    }
+
+    .title{
+        transition: 0.7s;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .title h1{
+        font-size: 1.5rem;
+    }
+
+    .responsive_img{
+        display: none;
+    }
+
+}
+
